@@ -2,32 +2,142 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+::-webkit-scrollbar-track {
+  border-radius: 30px;
+  background: transparent; /* No background color */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;  /* Color of the thumb */
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;  /* Darker on hover */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent; /* Thumb color and transparent track */
+}
+
+
+
+.background{
+    background-color: rgb(29, 27, 27);
+    height: 100%;
+}
+
+#search{
+    padding: 2px;
+    border-radius: 5px;
+}
+
+#search::placeholder{
+  color: black;
+}
+
+.trendimg{
+    height: 35vh;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.trendimg:hover{
+  transform:  scale(1.05);
+}
+
+.float-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .floating-box {
+    position: fixed;
+    bottom: 80px;
+    right: 200px;
+    width: 65vw;
+    height: 70vh;
+    padding: 20px;
+    color: white;
+    background-color: rgb(55 48 163);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000;
+    overflow-y: auto;
   }
-}
+
+  .button{
+    background-color: #f3c600;
+    color: rgb(8, 8, 8);
+    padding: 3px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  .button:hover{
+    transform: scale(1.09);
+  }
+
+  .floatingmovie{
+    position: fixed;
+    bottom: 80px;
+    right: 200px;
+    width: 65vw;
+    height: 70vh;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  .close{
+    z-index: 1000;
+    color: white;
+    position: fixed;
+    right: 100px;
+    top: 100px;
+    padding: 10px;
+    background-color: red;
+  }
+
+  .trend{
+    overflow: auto;
+  }
+
+  .navitem{
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+
+  .navitem:hover{
+    color: #a71c1c;
+    transform: scale(1.2);
+  }
+
+  .postercon{
+    height: auto;
+  }
+
+  .posteritem{
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .posteritem:hover{
+    transform: scale(1.05);
+  }
