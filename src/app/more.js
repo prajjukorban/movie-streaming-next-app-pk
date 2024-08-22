@@ -119,6 +119,21 @@ const more = () => {
           className="h-[45vh] cursor-pointer posteritem"
           alt=""
         />
+
+        <img
+          src="https://m.media-amazon.com/images/M/MV5BN2QyZGU4ZDctOWMzMy00NTc5LThlOGQtODhmNDI1NmY5YzAwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+          onClick={() => {
+            fetchdata("Dune: Part One"),
+              setlink(
+                "https://drive.google.com/file/d/1KKSbVkS892Vj93PSa2RuMwL-m7a_a2YN/preview"
+              );
+          }}
+          className="h-[45vh] cursor-pointer posteritem"
+          alt=""
+        />
+
+        {/* image or poster are above */}
+
       </div>
 
       {data ? (
